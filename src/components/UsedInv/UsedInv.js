@@ -1,101 +1,223 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-
-const tabsStyle = {
-  display:'flex',
-  flexDirection:'column'
-}
-const tabListStyle = {
-  display:'flex',
-  flexDirection:'row',
-  listStyleType:'none',
-  position:'absolute',
-  top:'100px',
-  left:'180px'
-}
-const tabStyle = {
-  width:'200px',
-  height:'32px',
-  textAlign:'center',
-  paddingBottom:'15px',
-  background:'grey',
-  cursor:'default',
-  borderRadius: '10px 10px 0 0',
-  border:'.5px solid black',
-}
-const tabPanelStyle1 = {
-  display:'flex',
-  listStyleType:'none',
-  position:'absolute',
-  top:'164px',
-  left:'213px',
-  width:'1600px',
-  height:'700px'
-}
-const tabPanelStyle2 = {
-  display:'flex',
-  listStyleType:'none',
-  position:'absolute',
-  top:'164px',
-  left:'213px',
-  width:'1600px',
-  height:'700px'
-}
-const Table = styled.table`
-  width:100%;
-  padding-top:10px;
-`
-const TableRow = styled.tr`
-  background:red;
-`
+import './UsedInv.css'
+import Sienna from './Sienna.jpg'
+import SearchBar from '../SearchBar/SearchBar'
 
 export default class UsedInv extends Component {
-  constructor(){
-    super()
-    this.state = {
-      VehicleData:[]
-    }
-  }
   render() {
     return (
-      <Tabs style={tabsStyle}>
-      <TabList style={tabListStyle}>
-        <Tab style={tabStyle}>
+      <Tabs>
+      <TabList>
+        <Tab>
           <h3>
-            Used Inventory
+            NEW Inventory
           </h3>
         </Tab>
-        <Tab style={tabStyle}>
+        <Tab>
           <h3>
-            New Inventory
+            USED Inventory
+          </h3>
+        </Tab>
+        <Tab>
+          <h3>
+            ALL Inventory
           </h3>
         </Tab>
       </TabList>
   
-      <TabPanel style={tabPanelStyle1}>
-        <Table>
-          <TableRow>
-            <th>Detailed View</th>
-            <th>Inv</th>
-            <th>Photo</th>
-            <th>Details</th>
-            <th>Days in Inv</th>
-            <th>Type</th>
-            <th>Mileage</th>
-            <th>External Color</th>
-            <th>interior Color</th>
-            <th>Pricing</th>
-            <th>Status</th>
-            <th>Deals</th>
-            <th>Model Code</th>
-            <th>Sales Code</th>
-          </TableRow>
-        </Table>
+      <TabPanel>
+        <div className="table">
+          <table>
+            <tbody>                   
+              <tr>              
+                <th>Details</th>
+                <th>Inv</th>
+                <th>Photo</th>
+                <th>Details</th>
+                <th>Days in Inv</th>
+                <th>Type</th>
+                <th>Mileage</th>
+                <th>External Color</th>
+                <th>interior Color</th>
+                <th>Pricing</th>
+                <th>Status</th>
+                <th>Deals</th>
+                <th>Model Code</th>
+                <th>Sales Code</th>
+              </tr>
+              <tr className='car'>
+                <td> <button className='view-btn'>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr><tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+              <tr className='car'>
+                <td> <button>VIEW</button> </td>
+                <td> * </td>
+                <td> <img src={Sienna} alt="Sienna"/> </td>
+                <td> New 2019 Toyota Sienna XLE Premium AWD Mini-van Passenger</td>
+                <td> 12 </td>
+                <td>Mini Van</td>
+                <td> 12 </td>
+                <td>Grey</td>
+                <td>Ash</td>
+                <td>35,999</td>
+                <td>New</td>
+                <td>None</td>
+                <td>Sienna</td>
+                <td>000</td>            
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </TabPanel>
-      <TabPanel style={tabPanelStyle2}>
-      <Table>
-      <TableRow>
+      <TabPanel>
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <h2>Used</h2>
+            </th>
+          </tr>
+          <tr>          
             <th>Detailed View</th>
             <th>Inv</th>
             <th>Photo</th>
@@ -110,8 +232,36 @@ export default class UsedInv extends Component {
             <th>Deals</th>
             <th>Model Code</th>
             <th>Sales Code</th>
-      </TableRow>
-        </Table>
+          </tr>
+        </tbody>
+      </table>
+      </TabPanel>
+      <TabPanel>
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <h2>All</h2>
+            </th>
+          </tr>
+          <tr>          
+            <th>Detailed View</th>
+            <th>Inv</th>
+            <th>Photo</th>
+            <th>Details</th>
+            <th>Days in Inv</th>
+            <th>Type</th>
+            <th>Mileage</th>
+            <th>External Color</th>
+            <th>interior Color</th>
+            <th>Pricing</th>
+            <th>Status</th>
+            <th>Deals</th>
+            <th>Model Code</th>
+            <th>Sales Code</th>
+          </tr>
+        </tbody>
+      </table>
       </TabPanel>
     </Tabs>
     )

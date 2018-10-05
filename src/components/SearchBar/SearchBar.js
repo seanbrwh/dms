@@ -44,7 +44,7 @@ export default class SearchBar extends Component {
   render() {
     return (
       <Container>
-        <Search type='search' placeholder='Vin Number Stock Number'/>
+        <Search type='search' placeholder='Search Everything'/>
         <SearchButton><i className="fa fa-search"></i></SearchButton>
       </Container>
     )
